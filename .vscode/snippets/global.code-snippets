@@ -1,0 +1,82 @@
+{
+	"Import every-layout": {
+		"scope": "scss",
+		"prefix": "imp",
+		"body": "@import 'styles/every-layout/index';"
+	},
+	"Import react": {
+		"scope": "javascriptreact,javascript,typescript",
+		"prefix": "impr",
+		"body": "import React from 'react';"
+	},
+	"Import classnames": {
+		"scope": "javascriptreact,javascript,typescript",
+		"prefix": "impcn",
+		"body": "import cn from 'classnames';"
+	},
+	"Import uuid": {
+		"scope": "javascriptreact,javascript,typescript",
+		"prefix": "impu",
+		"body": "import { v1 as uuid } from 'uuid';"
+	},
+	"React component": {
+		"scope": "javascriptreact,javascript,typescript",
+		"prefix": "rcc",
+		"body": [
+			"import React from \"react\";",
+			"",
+			"export function ${1:Name}({",
+			"  ${2:props}",
+			"}) {",
+			"  return (",
+			"    <div>toto</div>",
+			"  );",
+			"}"
+		],
+		"description": "React component"
+	},
+	"React test": {
+		"scope": "javascriptreact,javascript,typescript",
+		"prefix": "rct",
+		"body": [
+			"import React from 'react';",
+			"import { shallow } from 'enzyme';",
+			"",
+			"import { ${1:Component} } from './index';",
+			"",
+			"describe('COMPONENT: ${1:Component}', () => {",
+			"  it('renders the component correctly', () => {",
+			"    const wrapper = shallow(<${1:Component} />);",
+			"",
+			"    expect(wrapper).toMatchSnapshot();",
+			"  });",
+			"});",
+			""
+		],
+		"description": "React test"
+	},
+	"Test function call": {
+		"scope": "javascriptreact,javascript,typescript",
+		"prefix": "typ",
+		"body": [
+			"const mockedClick = jest.fn();",
+			"const onClick = wrapper.find(${1:Item}).prop('onClick');",
+			"expect(typeof onClick).toBe('function');",
+			"onClick();",
+			"expect(mockedClick).toHaveBeenCalled();"
+		]
+	},
+	"Expect to exist": {
+		"scope": "javascriptreact,javascript,typescript",
+		"prefix": "exp",
+		"body": [
+			"expect(${1:element}).toExist();"
+		],
+		"description": "Expect to exist"
+	},
+	"Import styles": {
+		"scope": "scss",
+		"prefix": "@im",
+		"body": "@import 'styles/variables';"
+	}
+}
