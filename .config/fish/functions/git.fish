@@ -9,6 +9,13 @@ function am --description "Git commit --amend"
     git commit --amend
 end
 
+function cm --description "Git commit"
+    print_purple "git add ."
+    git add .
+    print_purple "git commit"
+    git commit
+end
+
 function rst --description "Git reset"
     print_purple "git restore --staged ."
     git restore --staged .
@@ -112,6 +119,6 @@ function rbi --description "Git rebase interactif"
 end
 
 function lg --description "Git log --oneline"
-    print_purple "git log --oneline"
-    git log --oneline
+    print_purple "git log $argv"
+    git log --graph --pretty=format:'%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' $argv
 end
