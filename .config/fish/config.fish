@@ -9,7 +9,6 @@ set -gx TOOLS_PWD "/Users/thomaschaf/.config/fish/tools"
 set -gx DATABASE_URL 'mysql2://root:@127.0.0.1'
 
 alias ys="yarn start"
-alias yb="yarn build"
 alias yt="yarn test -- -u"
 alias yi="yarn install"
 alias work="cd $WORK_PWD"

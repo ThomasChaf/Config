@@ -115,7 +115,7 @@ end
 
 function rbi --description "Git rebase interactif"
     print_purple "git rebase -i HEAD~$argv[1]"
-    git rebase -i HEAD~$argv[1]
+    git rebase --rebase-merges -i HEAD~$argv[1]
 end
 
 function lg --description "Git log --oneline"
