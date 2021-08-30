@@ -13,7 +13,11 @@ function cm --description "Git commit"
     print_purple "git add ."
     git add .
     print_purple "git commit"
-    git commit
+    if test $argv[1]
+        git commit -m $argv[1]
+    else
+        git commit
+    end
 end
 
 function rst --description "Git reset"
@@ -115,6 +119,11 @@ end
 
 function rbi --description "Git rebase interactif"
     print_purple "git rebase -i HEAD~$argv[1]"
+    git rebase -i HEAD~$argv[1]
+end
+
+function rbim --description "Git rebase merge interactif"
+    print_purple "git rebase --rebase-merges -i HEAD~$argv[1]"
     git rebase --rebase-merges -i HEAD~$argv[1]
 end
 

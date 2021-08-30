@@ -9,9 +9,9 @@ function fish_prompt
 
     if [ $__git_branch ]
         set_color red
-        echo -n " [branch:"
+        echo -n " ("
         echo -n $__git_branch
-        echo -n "]"
+        echo -n ")"
     end
 
     set_color normal

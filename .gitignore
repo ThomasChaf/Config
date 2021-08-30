@@ -50,3 +50,4 @@ getting-started/
 
 node_modules/
 .redhat
+.config/yarn
