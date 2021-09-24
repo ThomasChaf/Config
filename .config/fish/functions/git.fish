@@ -5,8 +5,8 @@ end
 function am --description "Git commit --amend"
     print_purple "git add ."
     git add .
-    print_purple "git commit --amend"
-    git commit --amend
+    print_purple "git commit --amend --no-edit"
+    git commit --amend --no-edit
 end
 
 function cm --description "Git commit"

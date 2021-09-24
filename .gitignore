@@ -24,6 +24,7 @@
 .npmrc
 .percona-toolkit.uuid
 .profile
+.python_history
 .rvm/
 .solargraph/
 .ssh/
@@ -45,6 +46,7 @@ Movies/
 Music/
 Pictures/
 Public/
+Sites/
 getting-started/
 
 
