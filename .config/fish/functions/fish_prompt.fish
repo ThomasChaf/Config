@@ -1,6 +1,6 @@
 function fish_prompt
     if not set -q __git_branch
-        set __git_branch ""(git branch ^/dev/null | grep \* | sed 's/* //')""
+        set __git_branch (git branch --show-current 2>/dev/null)
     end
 
     echo -n '-> '

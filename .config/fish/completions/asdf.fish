@@ -1,0 +1,1 @@
+/Users/thomaschaf/.asdf/completions/asdf.fish
